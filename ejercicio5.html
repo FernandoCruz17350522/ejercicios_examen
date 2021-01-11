@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>variables por teclado</title>
+      <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+    document.write('<div class="cuadro">');
+
+      var iva,precio,total,aux;
+      iva=0.16;
+      precio=prompt("Precio del producto:","");
+      precio=parseFloat(precio);
+      total= precio + (precio * iva);
+
+      document.write('<p class= "etiqueta">',"IVA: ", (iva * 100) + "%");
+      document.write("<br/>");
+      document.write("Precio sin IVA: ", precio);
+      document.write("<br/>");
+      document.write("Precio con IVA: ", total);
+document.write('</div>');
+    </script>
+  </body>
+</html>

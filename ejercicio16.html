@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Ejer16</title>
+  </head>
+  <body>
+    <script type="text/javascript" >
+    document.write('<div class="cuadro">');
+      var nombre,dias,salario,extras,total,faltas,falta,tipo_falta,triples;
+      triples = 0;
+      nombre=prompt("Nombre");
+      dias=parseInt(prompt("Dias trabajados"));
+      faltas=parseInt(prompt("Total de faltas"));
+      //Si faltas es diferente de 0 pregunta el tipo de falta
+      if (faltas!=0) {
+        do {
+            tipo_falta=parseInt(prompt("Tipo de falta\n\n   1) Por enfermedad\n   2) Motivo personal\n   3) Injustificada"));
+            switch (tipo_falta) {
+              case 1: tipo_falta=1;
+                      falta="Justificada por enfermedad";
+                      break;
+              case 2: tipo_falta=2;
+                      falta="Justificada por motivo personal";
+                      break;
+              case 3: tipo_falta=3;
+                      falta="Injustificada";
+                      break;
+              default:alert("Inserte Una Opcion Valida")
+
+            }
+          } while (tipo_falta>3 || tipo_falta<1);
+      }
+
+      salario=parseInt(prompt("Salario Diario"));
+      extras=parseInt(prompt("Horas extras trabajadas"));
+
+      //Calcular el pago por hora con el salario diario
+      salario_h = salario / 8;
+      //Calculo del pago total de los dias trabajados
+      total = salario * dias;
+      //Calculo del pago de las horas extras
+      if (extras>9) {
+        triples = extras - 9;
+        total = total + ((salario_h * triples) * 3);
+        total = total + ((salario_h * 9) * 2);
+      }else{
+        total = total + ((salario_h * extras) * 2);
+      }
+
+      //Descuento de faltas en base al tipo de falta
+      if (tipo_falta==2) {
+        total = total - ((salario * .5) * faltas);
+      } else if(tipo_falta==3){
+        total = total - (salario * faltas);
+      }
+
+      document.write("Nombre: "+nombre+"<br/>");
+      document.write("Dias trabajados: "+dias+"<br/>");
+      //Si la cantidad de faltas es diferente de 0 imprime el tipo de falta
+      if (faltas!=0) {
+        document.write("Faltas: "+faltas+"<br/>");
+        document.write("Tipo de falta: "+falta+"<br/>");
+      }else{
+          document.write("Faltas: "+faltas+"<br/>");
+      }
+
+      document.write("Salario diario: "+salario+"<br/>");
+      document.write("Horas extras: "+extras+"<br/>");
+      document.write("Horas dobles: "+(extras-triples)+"<br/>");
+      document.write("Horas triples: "+triples+"<br/>");
+      document.write("Sueldo: "+total);
+
+
+    </script>
+  </body>
+</html>

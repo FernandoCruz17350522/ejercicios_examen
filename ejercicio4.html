@@ -1,0 +1,41 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>variables por teclado</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <script type="text/JavaScript">
+
+  document.write('<div class="cuadro">');
+    var nombre, edad, peso, altura, dir, tel, fechanac;
+  nombre=prompt('cuál es su nombre','');
+  edad=prompt('cuál es su edad','');
+  altura=prompt('cuál es su altura','');
+  dir=prompt('cuál essu dirección','');
+  tel=prompt('cuál es su número de telefono','');
+  fechanac=prompt('cuál es su fecha de nacimiento','');
+
+  document.write('<p class= "etiqueta">',"Nombre: ", nombre);
+  document.write('<br>');
+
+  document.write("Edad: ", edad);
+  document.write('<br>');
+
+  document.write("Altura: ", altura);
+  document.write('<br>');
+
+  document.write("Direccón: ", dir);
+  document.write('<br>');
+
+  document.write("Telefono: ", tel);
+  document.write('<br>');
+
+  document.write("Fecha de nacimiento: ", fechanac);
+
+  document.write('</div>');
+  </script>
+</body>
+</html>

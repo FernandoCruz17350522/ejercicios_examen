@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>variables por teclado</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write('<div class="cuadro">');
+      var Nombre,Edad;
+      Nombre=prompt("Introduzca su nombre:","");
+      Edad=parseFloat(prompt("Edad:",""));
+
+
+      if (Edad<=1)
+      {
+document.write('<p class= "etiqueta">',"Nombre:", Nombre, "<br>");
+document.write("Tiene: ", Edad, " año", "<br>");
+document.write("Es un bebé", "<br>");
+
+      }
+      else if(Edad>=2 && Edad<=12){
+document.write('<p class= "etiqueta">',"Nombre:", Nombre, "<br>");
+document.write("Tu tienes: ", Edad, " años", "<br>");
+        document.write("Eres un niño", "<br>");
+
+      }
+      else if(Edad>=13 && Edad<18){
+document.write('<p class= "etiqueta">',"Nombre:", Nombre, "<br>");
+document.write("Tu tienes:", Edad, " años", "<br>");
+        document.write("Eres un adolescente", "<br>");
+
+      }
+      else if(Edad>=18 && Edad<31){
+        document.write('<p class= "etiqueta">',"Nombre:", Nombre, "<br>");
+         document.write("Tienes:", Edad, " años", "<br>");
+        document.write("Eres un joven", "<br>");
+
+      }
+      else if(Edad>=31 && Edad<65){
+        document.write('<p class= "etiqueta">',"Nombre:", Nombre, "<br>");
+        document.write("Tienes:", Edad, " años", "<br>");
+        document.write("Ya eres un adulto", "<br>");
+
+      }
+      else {
+        document.write('<p class= "etiqueta">',"Nombre:", Nombre, "<br>");
+        document.write("Usted tiene:", Edad, " años", "<br>");
+        document.write("Es una persona grande, un anciano", "<br>");
+
+        }
+        document.write('</div>');
+    </script>
+  </body>
+</html>

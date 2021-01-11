@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>variables por teclado</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+    document.write('<div class="cuadro">');
+      var nombre,promedio,cal1,cal2,cal3,cal4,cal5;
+      nombre=prompt("Cual es su nombre;","");
+      cal1=prompt("Calficacion Unidad 1","");
+      cal1=parseFloat(cal1);
+      cal2=prompt("Calficacion Unidad 2","");
+      cal2=parseFloat(cal2);
+      cal3=prompt("Calficacion Unidad 3","");
+      cal3=parseFloat(cal3);
+      cal4=prompt("Calficacion Unidad 4","");
+      cal4=parseFloat(cal4);
+      cal5=parseFloat(prompt("Calficacion Unidad 5",""));
+
+      document.write('<p class= "etiqueta">',"Calificacion 1: ", cal1, "<br/>");
+      document.write("Calificacion 2: ", cal2, "<br/>");
+      document.write("Calificacion 3: ", cal3, "<br/>");
+      document.write("Calificacion 4: ", cal4, "<br/>");
+      document.write("Calificacion 5: ", cal5, "<br/>");
+
+      promedio=(cal1 + cal2 + cal3 + cal4+ cal5)/5;
+      if (promedio>= 70)
+      {
+document.write('<p class= "etiqueta">',"Nombre: ", nombre, "<br/>");
+document.write("Usted acredito la materia es un prooo" , "<br/>");
+document.write("promedio de: ", promedio);
+      }
+      else {
+        document.write('<p class= "etiqueta">',"Nombre: ", nombre, "<br/>");
+        document.write("Nooooo reprobaste la materia, la tenias que ... " , "<br/>");
+        document.write("promedio de: ", promedio);
+      }
+document.write('</div>');
+    </script>
+  </body>
+</html>

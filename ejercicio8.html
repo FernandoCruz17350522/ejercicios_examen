@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>variables por teclado</title>
+      <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      document.write('<div class="cuadro">');
+      var nombre,agua;
+      nombre=prompt("Cual es su nombre;","");
+      agua=parseFloat(prompt("Tiempo:",""));
+
+
+      if (agua == 60)
+      {
+      document.write('<p class= "etiqueta">',"Nombre: ",nombre, "<br>");
+      document.write("Tiempo: ",agua, " Segundos", "<br>");
+      document.write("sano", "<br>");
+      }
+      else if(agua>60){
+        document.write('<p class= "etiqueta">',"Nombre:",nombre, "<br>");
+      document.write("Tiempo: ",agua, " Segundos", "<br>");
+        document.write("eso es todo jefe, mucha resustencia ", "<br>");
+      }
+      else {
+      document.write('<p class= "etiqueta">',"Nombre: ",nombre, "<br>");
+        document.write("Tiempo: ",agua, " Segundos", "<br>");
+        document.write("padece de asma", "<br>");
+      }
+
+document.write('</div>');
+    </script>
+  </body>
+</html>

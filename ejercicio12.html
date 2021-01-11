@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Ejer 12</title>
+</head>
+<body
+
+<div align="center">
+<div class="fnd">
+    <h1>Información del boleto</h1>
+    <h3>Feliz viaje</h3>
+
+    <div class="cajap">
+
+        <script>
+            var boleto, destino, opc, nombre, cedula, zona, precio, precion, des,ban;
+
+            nombre=prompt('Ingrese su nombre:');
+            cedula=prompt('Ingrese su cedula');
+            boleto=parseInt(prompt('Ingrese el tipo de boleto \n 1. Primera clase \n 2. Segunda clase \n 3. Tercera clase'));
+            destino=parseInt(prompt('Ingrese el destino \n 1. Europa \n 2. America del norte \n 3. America del sur \n 4. Islas caribe'));
+            zona=parseInt(prompt('Ingrese la zona \n 1. Fumadores \n 2. No fumadores'));
+
+            switch(destino){
+                case 1:
+
+                     switch(boleto){
+                        case 1:
+                            boleto='Primera clase';
+                            precio=2500;
+                            precion=precio;
+                            if(zona==1){
+                                precio=precio-(precio*0.10);
+                                zona='fumadores';
+                                des='10%';
+                            }else if(zona==2){
+                                precio=precio-(precio*0.08);
+                                zona='No fumadores';
+                                des='8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                        break;
+
+                         case 2:
+                         boleto='Segunda clase';
+                         precio=2100;
+                         precion=precio;
+                         if(zona==1){
+                                precio=precio*1.05;
+                                zona='fumadores';
+                                des='Recargo de 5%';
+                            }else if(zona==2){
+                                precio=precio*1.08;
+                                zona='No fumadores';
+                                des='Recargo de 8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+
+                         break;
+                         case 3:
+                         boleto='Tercera clase';
+                         precio=1900;
+                         precion=precio;
+                         if(zona==1){
+                                precio=precio*1.05;
+                                zona='fumadores';
+                                des=' Recargo de 5%';
+                            }else if(zona==2){
+                                precio=precio*1.08;
+                                zona='No fumadores';
+                                des=' Recargo de8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+
+                         break;
+                         default:document.write('Tipo invalido de boleto\n');
+                         ban=1;
+
+                     }
+                     destino='Europa';
+                     break;
+
+
+                case 2:
+
+                switch(boleto){
+                         case 1:
+                         boleto='Primera clase';
+                        precio=2000;
+                        precion=precio;
+                        if(zona==1){
+                                precio=precio-(precio*0.10);
+                                zona='fumadores';
+                                des='10%';
+                            }else if(zona==2){
+                                precio=precio-(precio*0.08);
+                                zona='No fumadores';
+                                des='8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                        break;
+                         case 2:
+                         boleto='Segunda clase';
+                         precio=1700;
+                         precion=precio;
+                         if(zona==1){
+                                precio=precio*1.05;
+                                zona='fumadores';
+                                des='Recargo de 5%';
+                            }else if(zona==2){
+                                precio=precio*1.08;
+                                zona='No fumadores';
+                                des='Recargo de 8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                         break;
+                         case 3:
+                         boleto='Tercera clase';
+                         precio=1400;
+                         precion=precio;
+                         if(zona==1){
+                                precio=precio*1.05;
+                                zona='fumadores';
+                                des='Recargo de 5%';
+                            }else if(zona==2){
+                                precio=precio*1.08;
+                                zona='No fumadores';
+                                des=' Recargo de 8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                         break;
+                         default:document.write('Tipo invalido de boleto\n');
+                         ban=1;
+
+                     }
+                     destino='America del norte';
+                     break;
+
+
+                case 3:
+
+                      switch(boleto){
+                         case 1:
+                         boleto='Primera clase';
+                        precio=1000;
+                        precion=precio;
+                        if(zona==1){
+                                precio=precio-(precio*0.10);
+                                zona='fumadores';
+                                des='10%';
+                            }else if(zona==2){
+                                precio=precio-(precio*0.08);
+                                zona='No fumadores';
+                                des='8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                        break;
+                         case 2:
+                         boleto='Segunda clase';
+                         precio=900;
+                         precion=precio;
+                         if(zona==1){
+                                precio=precio*1.05;
+                                zona='fumadores';
+                                des='Recargo de 5%';
+                            }else if(zona==2){
+                                precio=precio*1.08;
+                                zona='No fumadores';
+                                des='Recargo de 8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                         break;
+                         case 3:
+                         boleto='Tercera clase';
+                         precio=750;
+                         precion=precio;
+                         if(zona==1){
+                                precio=precio*1.05;
+                                zona='fumadores';
+                                des='Recargo de 5%';
+                            }else if(zona==2){
+                                precio=precio*1.08;
+                                zona='No fumadores';
+                                des='Recargo de 8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                         break;
+                         default:document.write('Tipo invalido de boleto\n');
+                         ban=1;
+
+                     }
+                     destino='America del sur';
+                     break;
+
+                case 4:
+
+                      switch(boleto){
+                         case 1:
+                         boleto='Primera clase';
+                        precio=800;
+                        precion=precio;
+                        if(zona==1){
+                                precio=precio-(precio*0.10);
+                                zona='fumadores';
+                                des='10%';
+                            }else if(zona==2){
+                                precio=precio-(precio*0.08);
+                                zona='No fumadores';
+                                des='8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                        break;
+                         case 2:
+                         boleto='Segunda clase';
+                         precio=700;
+                         precion=precio;
+                         if(zona==1){
+                                precio=precio*1.05;
+                                zona='fumadores';
+                                des='Recargo de 5%';
+                            }else if(zona==2){
+                                precio=precio*1.08;
+                                zona='No fumadores';
+                                des='Recargo de 8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                         break;
+                         case 3:
+                         boleto='Tercera clase';
+                         precio=500;
+                         precion=precio;
+                         if(zona==1){
+                                precio=precio*1.05;
+                                zona='fumadores';
+                                des='Recargo de 5%';
+                            }else if(zona==2){
+                                precio=precio*1.08;
+                                zona='No fumadores';
+                                des='Recargo de 8%';
+                            }else{
+                                document.write('Zona invalida\n');
+                                ban=1;
+                            }
+                         break;
+
+                         default:
+                         document.write('Tipo invalido de boleto\n');
+                         ban=1;
+                         break;
+                     }
+                     destino='Islas Caribe';
+                break;
+
+                default:
+                    document.write('Destino invalido \n');
+                    ban=1;
+                break;
+
+            }
+
+
+
+
+
+            if(ban==1){
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'ERROR AL RELLENAR DATOS!'
+                })
+            }else{
+                document.write('<strong>Nombre:</strong> ', nombre, '<br>');
+            document.write('<strong>Cedula:</strong> ', cedula, '<br>');
+            document.write('<strong>Tipo de boleto:</strong> ', boleto, '<br>');
+            document.write('<strong>Destino:</strong> ', destino, '<br>');
+            document.write('<strong>Zona:</strong> ', zona, '<br>');
+            document.write('<strong>Precio neto:</strong> ', precion, '<br>');
+            document.write('<strong>Descuento:</strong> ',des, '<br>')
+            document.write('<strong>Precio total:</strong> ', precio, '<br>');
+
+            Swal.fire({
+              position: 'top-end',
+              icon: 'Excelente',
+              title: 'Datos del boleto correctos',
+              showConfirmButton: false,
+              timer: 1500
+            })
+            }
+
+
+        </script>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

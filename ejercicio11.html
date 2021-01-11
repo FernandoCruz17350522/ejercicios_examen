@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilo.css">
+    <title>switch</title>
+
+  </head>
+
+    <script type="text/javascript">
+    document.write('<div class="cuadro">');
+      var opc,num1,num2,ope,resultado;
+      opc=parseFloat(prompt("Seleccione la operacion que desea realizar \n 1.Suma \ 2.Resta \ 3.Multiplicación \ 4.División",""));
+      num1=parseFloat(prompt("Ingrese el primer numero: ",""));
+      num2=parseFloat(prompt("Ingrese el segundo numero: ",""));
+
+      switch (opc) {
+        case 1:
+        resultado=num1 + num2;
+        ope='Suma';
+        document.write('<p class= "etiqueta">',"Primer digito es:",num1,'<br>', "Segundo digito es:",num2,'<br>',"El resultado de la ", ope, " es:", resultado);
+
+
+          break;
+
+          case 2:
+          if(num1>num2){
+            resultado=num1 - num2;
+            ope='Resta';
+document.write('<p class= "etiqueta">',"Primer digito es:", num1 ,'<br>', "Segundo digito es:", num2 ,'<br>',"El resultado de la ", ope, " es: ", resultado);
+          }
+          else {
+            resultado= num2 - num1;
+  ope='Resta';
+  document.write('<p class= "etiqueta">',"Primer digito es:",num1,'<br>', "Segundo digito es:",num2,'<br>',"El resultado de la",ope, " es:", resultado);
+
+          }
+          break;
+
+          case 3:
+          resultado=num1 * num2;
+          ope='Multiplicación';
+          document.write('<p class= "etiqueta">',"El primer digito es:",num1,'<br>', "El Segundo digito es:",num2,'<br>',"El resultado de la ", ope, " es:", resultado);
+
+            break;
+            case 4:
+            if(num1>num2){
+              resultado=num1 / num2;
+              ope='Division';
+              document.write('<p class= "etiqueta">',"El primer digito es:",num1,'<br>', "El Segundo digito es:",num2,'<br>',"El resultado de la ", ope, " es:", resultado);
+
+            }
+            else {
+              resultado= num2 / num1;
+    ope='División';
+    document.write('<p class= "etiqueta">',"El primer digito es:",num1,'<br>', "El Segundo digito es:",num2,'<br>',"El resultado de:",ope, " es:", resultado);
+
+            }
+            break
+        default:document.write("Opcion invalida");
+
+      }
+
+document.write('</div>');
+    </script>
+  </body>
+</html>

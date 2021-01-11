@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Ejer15</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+    document.write('<div class="cuadro">');
+        var num, indi, suma=0, par=0, inpar=0, pro=0;
+
+        num=parseInt(prompt('Ingrese la cantidad de numeros'));
+
+        for(var i=1; i<=num; i++){
+
+            indi=parseInt(prompt('Ingresa un numero'));
+
+            suma=suma+indi;
+
+            if((indi%2)==0){
+                par++;
+            }else{
+                inpar++;
+            }
+
+           document.write(indi,'<br>');
+        }
+
+        pro=suma/num;
+
+        document.write('Numeros totales= ', num,'<br>');
+        document.write('Suma= ', suma,'<br>');
+        document.write('Promedio= ', pro,'<br>');
+        document.write('Pares= ', par,'<br>');
+        document.write('Impares= ', inpar,'<br>');
+        document.write('</div>');
+   </script>
+
+</body>
+</html>

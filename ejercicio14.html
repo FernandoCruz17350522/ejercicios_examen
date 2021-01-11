@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="estilo.css">
+  <title>For</title>
+
+</head>
+<body>
+  <script type="text/JavaScript">
+  document.write('<div class="cuadro">');
+    var Tabla,Num,i;
+Tabla=parseInt(prompt('Ingrese el numero que desea saber su tabla'));
+Tabla2=0;
+document.write('<p class= "etiqueta">',"Tabla de multiplicar del número: ", Tabla);
+for (i = 1; i <=10; i++) {
+  Tabla2=Tabla*i;
+  document.write('<p class= "etiqueta">', Tabla, "x" , i," = ", Tabla2,'<br>');
+}
+document.write('</div>');
+
+  </script>
+</body>
+</html>

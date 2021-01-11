@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>variables por teclado</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write('<div class="cuadro">');
+      var Nombre,Edad;
+      Nombre=prompt("Introduzca su nombre;","");
+      Edad=parseFloat(prompt("Edad:",""));
+
+
+      if (Edad<18)
+      {
+        document.write('<p class= "etiqueta">',"Nombre:",Nombre, "<br>");
+        document.write("Tu tienes ", Edad, " años", "<br>");
+document.write("Menor de edad", "<br>");
+
+      }
+      else if(Edad>=18 && Edad<65){
+        document.write('<p class= "etiqueta">',"Nombre:",Nombre, "<br>");
+             document.write("Tu tienes ", Edad, " años", "<br>");
+        document.write("Mayor de edad", "<br>");
+
+      }
+      else {
+        document.write('<p class= "etiqueta">',"Nombre:",Nombre, "<br>");
+        document.write("Usted tiene ", Edad, " años", "<br>");
+        document.write("Es de la tercera edad", "<br>");
+               }
+document.write('</div>');
+
+    </script>
+  </body>
+</html>

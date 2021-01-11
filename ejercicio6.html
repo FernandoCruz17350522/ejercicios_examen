@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calcular promedio</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      var nombre,promedio,cal1,cal2,cal3,cal4;
+      nombre=prompt('Ingrese su nombre','');
+      cal1=prompt("Calficacion de la Unidad 1","");
+      cal1=parseFloat(cal1);
+      cal2=prompt("Calficacion de la Unidad 2","");
+      cal2=parseFloat(cal2);
+      cal3=prompt("Calficacion de la Unidad 3","");
+      cal3=parseFloat(cal3);
+      cal4=prompt("Calficacion de la Unidad 4","");
+      cal4=parseFloat(cal4);
+
+      document.write('<div class="cuadro">');
+document.write('<p class= "etiqueta">',"Nombre:", nombre, "<br/>");
+      document.write("Calificacion 01: ", cal1, "<br/>");
+      document.write("Calificacion 02: ", cal2, "<br/>");
+      document.write("Calificacion 03: ", cal3, "<br/>");
+      document.write("Calificacion 04: ", cal4, "<br/>");
+
+      cal1 = (cal1 * .2);
+      cal2 = (cal2 * .15);
+      cal3 = (cal3 * .3);
+      cal4 = (cal4 * .35);
+
+      promedio=cal1 + cal2 + cal3 + cal4;
+
+      document.write( "Su promedio es: ", promedio);
+      document.write('</div>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilo.css">
+    <title>espero no reprobar</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+
+    //variables a utilizar
+        var nombre, Apellidopa, Apellidoma, Salario, dias, ingreso, faltas,
+        tipodefalta, sueldob, eft, estimulo, aguinaldo, auxi, percepciones, deducciones, isr, sceav, siv, ssc, ss, fov, sueldol;
+
+        //las variables que guardaran cadenas
+        nombre=prompt("Introducir el Nombre");
+        Apellidopa=prompt("Introducir el apellido paterno");
+        Apellidoma=prompt("Introducir el apellido materno");
+        //hay que hacer la conversion de las variables de cadena a enteros para poder hacer los calculos correspondientes
+        dias=parseInt(prompt("Cuantos Dias trabajó"));
+        //colocaremos la primeras operaciones para poder realizar el calculo del aginaldo, para ello debemos tomar encueta
+        //los dias que contiene un año
+        if (dias<365) {
+          //para calcular las faltas debemos restar los dias trabajados al año para ahorrar unas lineas de operaciones
+          faltas= 365 - dias;
+          do {
+              tipodefalta=parseInt(prompt("Las faltas estan\n   1) Justificada:( \n   2) No justificada"));
+
+              switch (tipodefalta) {
+                case 1: falta="Justificada";
+                        break;
+                case 2: falta="No justificada";
+                        break;
+                default:alert("chale, por que fallaste")
+
+              }
+            } while (tipodefalta>2 || tipodefalta<1);
+        }
+
+        //de igual manera hay que convertir la cadena a entero
+        Salario=parseInt(prompt("Introducir salario diario"));
+        ingreso=parseInt(prompt("En que año ingreso?"));
+
+        //el resto de las operaciones se realiza segun lo que se pide en enunciado
+        sueldob = Salario * dias;
+        eft = sueldob * 0.055;
+        estimulo = sueldob * 0.62;
+        if (faltas!=0) {
+          auxi = Salario * 15;
+          aguinaldo = (auxi/365) * dias;
+        } else {
+          aguinaldo = Salario * 15;
+        }
+        percepciones = sueldob + eft + estimulo + aguinaldo;
+
+        //Deducciones
+        isr = sueldob * 0.16;
+        sceav = sueldob * 0.077;
+        siv = sueldob * 0.0078;
+        ssc = sueldob * 0.0062;
+        ss = sueldob * 0.042;
+        fov = sueldob * 0.3;
+        deducciones = isr + sceav + siv + ssc + ss + fov;
+
+        sueldol = percepciones - deducciones;
+
+document.write('<div class="cuadro">');
+        document.write("Nombre: "+nombre+" "+Apellidopa+" "+Apellidoma);
+        document.write("<br>");
+        document.write("sueldo bruto: "+sueldob);
+        document.write("<br>");
+        document.write("Eficiencia en el trabajo: "+eft);
+        document.write("<br>");
+        document.write("Estimulo por puntualidad y asistencia: "+estimulo);
+        document.write("<br>");
+        document.write("Aguinaldo: "+aguinaldo);
+        document.write("<br>");
+        document.write("Total percepciones: "+percepciones);
+        document.write("<br>");
+        document.write("Deducciones");
+        document.write("<br>");
+        document.write("ISR: "+isr);
+        document.write("<br>");
+        document.write("SCEAV: "+sceav);
+        document.write("<br>");
+        document.write("SIV: "+siv);
+        document.write("<br>");
+        document.write("SSC: "+ssc);
+        document.write("<br>");
+        document.write("SS: "+ss);
+        document.write("<br>");
+        document.write("FOVVISTE: "+fov);
+        document.write("<br>");
+        document.write("Total deducciones: "+deducciones);
+        document.write("<br>");
+        document.write("Sueldo liquido: "+sueldol);
+document.write('</div>');
+
+    </script>
+
+  </body>
+</html>
